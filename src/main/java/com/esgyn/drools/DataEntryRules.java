@@ -1,5 +1,6 @@
 package com.esgyn.drools;
 
+import org.drools.core.spi.Tuple;
 import org.kie.api.KieServices;
 import org.kie.api.builder.ReleaseId;
 import org.kie.api.runtime.KieContainer;
@@ -40,7 +41,7 @@ public class DataEntryRules {
         System.out.println(rih);
         for (Tuple tuple : rih.getFiredTuples())
         {
-        	
+        	tuple.toString();
         }
         kSession.dispose();
         kContainer.dispose();
