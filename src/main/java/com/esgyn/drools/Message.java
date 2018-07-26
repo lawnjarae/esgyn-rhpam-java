@@ -132,4 +132,12 @@ public class Message {
     public void setAnnual_miles(int i) {
         this.annual_miles = i;
     }
+
+	@Override
+	public String toString() {
+		return "Message [fname=" + fname + ", lname=" + lname + ", city=" + city + ", state=" + state + ", zip=" + zip
+				+ ", vehicle_make=" + vehicle_make + ", use=" + use + ", fav_food=" + fav_food + ", fav_movie="
+				+ fav_movie + ", fav_sport=" + fav_sport + ", fav_team=" + fav_team + ", model_year=" + model_year
+				+ ", annual_miles=" + annual_miles + ", points=" + points + "]";
+	}
 }

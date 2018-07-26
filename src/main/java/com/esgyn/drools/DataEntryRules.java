@@ -3,6 +3,7 @@ package com.esgyn.drools;
 import org.drools.core.spi.Tuple;
 import org.kie.api.KieServices;
 import org.kie.api.builder.ReleaseId;
+import org.kie.api.event.rule.DebugAgendaEventListener;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
@@ -14,6 +15,8 @@ public class DataEntryRules {
         ReleaseId releaseId = ks.newReleaseId( "com.esgyn.drools", "esgyn-rules", "LATEST" );
         KieContainer kContainer = ks.newKieContainer(releaseId);
         KieSession kSession = kContainer.newKieSession("default-stateful-kie-session");
+        
+        kSession.addEventListener(new DebugAgendaEventListener());
         
         RulesInfoHelper rih = new RulesInfoHelper();
         Message msg = new Message();
