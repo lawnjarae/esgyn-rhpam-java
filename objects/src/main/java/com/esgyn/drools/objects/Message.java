@@ -1,4 +1,4 @@
-package com.esgyn.drools;
+package com.esgyn.drools.objects;
 
 public class Message {
 	private String fname; 

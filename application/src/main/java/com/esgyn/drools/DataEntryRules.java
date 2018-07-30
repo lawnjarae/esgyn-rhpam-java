@@ -1,11 +1,13 @@
 package com.esgyn.drools;
 
-import org.drools.core.spi.Tuple;
 import org.kie.api.KieServices;
 import org.kie.api.builder.ReleaseId;
 import org.kie.api.event.rule.DebugAgendaEventListener;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
+
+import com.esgyn.drools.objects.Message;
+import com.esgyn.drools.objects.RulesInfoHelper;
 
 public class DataEntryRules { 
 
@@ -42,10 +44,7 @@ public class DataEntryRules {
 
         System.out.println("Points=" + msg.getPoints());
         System.out.println(rih);
-        for (Tuple tuple : rih.getFiredTuples())
-        {
-        	tuple.toString();
-        }
+        
         kSession.dispose();
         kContainer.dispose();
     }
