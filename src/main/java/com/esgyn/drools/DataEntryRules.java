@@ -6,8 +6,8 @@ import org.kie.api.event.rule.DebugAgendaEventListener;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
-import com.esgyn.drools.objects.Message;
-import com.esgyn.drools.objects.RulesInfoHelper;
+import com.esgyn.drools.Message;
+import com.esgyn.drools.RulesInfoHelper;
 
 public class DataEntryRules { 
 
@@ -33,10 +33,10 @@ public class DataEntryRules {
         msg.setAnnual_miles(5000);
         msg.setUse("pleasure");
 
-        msg.setFav_food("steak");
-        msg.setFav_movie("Star Wars");
-        msg.setFav_sport("Basketbakll");
-        msg.setFav_team("Warriors");
+        msg.setFav_food("STEAK");
+        msg.setFav_movie("STAR WARS");
+        msg.setFav_sport("SOCCER");
+        msg.setFav_team("ROCKIES");
 
         kSession.insert(rih);
         kSession.insert(msg);
